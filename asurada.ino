@@ -19,7 +19,7 @@ int randomNum = 0;
 
 void setup() {
   servo1.attach(servo1Pin); //D4
-  servo1.write(53);
+  servo1.write(0);
   servo2.attach(servo2Pin); //D4
   servo2.write(0);
   pinMode(analogPin, INPUT);
@@ -36,9 +36,9 @@ void setup() {
     delay(10);
   }
   defaultSoundVal = sumSoundVal/50;
-  servo1.write(190);
+  servo1.write(140);
   delay(700);
-  servo1.write(53);
+  servo1.write(0);
 }
 
 void loop() {
@@ -69,9 +69,9 @@ void loop() {
   if(motionCnt > 200){
     randomNum = random(1, 20);
     if(randomNum > 10){
-      servo1.write(190);
+      servo1.write(140);
       delay(700);
-      servo1.write(53);
+      servo1.write(0);
     }else{
       servo2.write(100);
       delay(700);
